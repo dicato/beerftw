@@ -1,11 +1,11 @@
 {% if person %}
+    <li>{{ person.name }}</li>
     <ul>
-    <li>Name: {{ person.name }}</li>
     {% if beers %}
         {% for b in beers %}
             <li><a href="/beers/{{ b.id }}/">{{ b.name }}</a></li>
         {% endfor %}
-    {% endif %}   
+    {% endif %}
     </ul>
 {% else %}
     <p>Who dat?</p>

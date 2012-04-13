@@ -1,9 +1,13 @@
+<CENTER>
+<h1>Beer Swap Leaderboard</h1>
 {% if averages %}
-    <ul>
+    <ol>
     {% for p, average in averages %}
         <li><a href="/people/{{ p.id }}/">{{ p.name }} -- {{ average }}%</a></li>
     {% endfor %}
-    </ul>
+    </ol>
 {% else %}
     <p>Leaderboard go BOOM!</p>
 {% endif %}
+</CENTER>
+
