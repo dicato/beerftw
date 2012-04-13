@@ -1,0 +1,9 @@
+{% if beers %}
+    <ul>
+    {% for b in beers %}
+        <li><a href="/beers/{{ b.id }}/">{{ b.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No beers? Well that's a problem....</p>
+{% endif %}

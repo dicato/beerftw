@@ -1,0 +1,9 @@
+{% if averages %}
+    <ul>
+    {% for p, average in averages %}
+        <li><a href="/people/{{ p.id }}/">{{ p.name }} -- {{ average }}%</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Leaderboard go BOOM!</p>
+{% endif %}

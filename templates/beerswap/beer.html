@@ -1,0 +1,9 @@
+{% if beer %}
+    <ul>
+    <li>Name: {{ beer.name }}</li>
+    <li>Brewery: {{ beer.brewery }}</li>
+    <li>Rating: {{ beer.rating }}</li>
+    </ul>
+{% else %}
+    <p>This is not the beer you are looking for...</p>
+{% endif %}   

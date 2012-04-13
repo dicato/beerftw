@@ -1,0 +1,9 @@
+{% if people %}
+    <ul>
+    {% for p in people %}
+        <li><a href="/people/{{ p.id }}/">{{ p.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No people drinking? Is this prohibition?.</p>
+{% endif %}
