@@ -3,7 +3,7 @@
 {% if averages %}
     <ol>
     {% for p, average in averages %}
-        <li><a href="/people/{{ p.id }}/">{{ p.name }} -- {{ average }}%</a></li>
+        <li><a href="/people/{{ p.id }}/">{{ p.name }} -- {{ average.0 }}% -- {{ average.1 }}</a></li>
     {% endfor %}
     </ol>
 {% else %}
