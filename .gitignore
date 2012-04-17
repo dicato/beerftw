@@ -42,4 +42,6 @@ data/
 .#*
 *~
 
-bootstrap
+static/
+beerftw/localsettings.py
+
