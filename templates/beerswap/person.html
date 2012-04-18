@@ -1,5 +1,7 @@
+<link rel="stylesheet" href="/static/bootstrap/docs/assets/css/bootstrap.css">
+<CENTER>
 {% if person %}
-    <li>{{ person.name }}</li>
+    <h1>{{ person.name }}</h1>
     <ul>
     {% if beers %}
         {% for b in beers %}
@@ -10,3 +12,5 @@
 {% else %}
     <p>Who dat?</p>
 {% endif %}   
+</CENTER>
+

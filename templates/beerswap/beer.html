@@ -1,9 +1,12 @@
+<link rel="stylesheet" href="/static/bootstrap/docs/assets/css/bootstrap.css">
+<CENTER>
+<h1>{{ beer.name }}</h1>
 {% if beer %}
     <ul>
-    <li>Name: {{ beer.name }}</li>
     <li>Brewery: {{ beer.brewery }}</li>
     <li>Rating: {{ beer.rating }}</li>
     </ul>
 {% else %}
     <p>This is not the beer you are looking for...</p>
 {% endif %}   
+</CENTER>
