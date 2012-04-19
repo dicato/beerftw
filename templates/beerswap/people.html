@@ -1,13 +1,33 @@
 <link rel="stylesheet" href="/static/bootstrap/docs/assets/css/bootstrap.css">
+<link href="/static/bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="/static/bootstrap/docs/assets/css/docs.css" rel="stylesheet">
 <CENTER>
-<h1>Swapees</h1>
-{% if people %}
-    <ul>
-    {% for p in people %}
-        <li><a href="/people/{{ p.id }}/">{{ p.name }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No people drinking? Is this prohibition?.</p>
-{% endif %}
+  <h1>The People</h1>
 </CENTER>
+<div class="container">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+	<th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% if people %}
+      {% for p in people %}
+      <tr>
+        <td><a href="/people/{{ p.id }}/">{{ p.name }}</a></td>
+      </tr>
+      {% endfor %}
+      {% else %}
+      <tr>
+	<td></td>
+      </tr>
+      {% endif %}
+    </tbody>
+  </table>
+  <div class="row-fluid show-grid">
+    <div class="span4"><a href="/people/">The People</a></div>
+    <div class="span4"><a href="/beers/">The Beers</a></div>
+    <div class="span4"><a href="/admin/">You're an admin?</a></div>
+  </div>
+</div>

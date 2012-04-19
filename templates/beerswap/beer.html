@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="/static/bootstrap/docs/assets/css/bootstrap.css">
+<link href="/static/bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="/static/bootstrap/docs/assets/css/docs.css" rel="stylesheet">
 <CENTER>
-<h1>{{ beer.name }}</h1>
-{% if beer %}
-    <ul>
-    <li>Brewery: {{ beer.brewery }}</li>
-    <li>Rating: {{ beer.rating }}</li>
-    </ul>
-{% else %}
-    <p>This is not the beer you are looking for...</p>
-{% endif %}   
+  <h1>{{ beer.name }}</h1>
 </CENTER>
+<div class="container">
+  <div class="row-fluid show-grid">
+    <div class="span6">Brewed by {{ beer.brewery }}</div>
+    <div class="span6">Rated at {{ beer.rating }}%</div>
+  </div>
+</div>
