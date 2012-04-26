@@ -2,12 +2,14 @@
 
 # Using local settings is much easier for
 # collaboration. Therefore, this is all commented
-# out and there is a local import at the bottom of
+# sout and there is a local import at the bottom of
 # this file. localsettings.py is not under version control
 # since it probably contains full paths in your dev environment
 # and other non-useful artifacts.
 
-"""
+import os
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -78,6 +80,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    '/app/static/',
 )
 
 # List of finder classes that know how to find static files in
@@ -108,15 +111,16 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'django_test_app.urls'
+ROOT_URLCONF = 'beerftw.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'django_test_app.wsgi.application'
+WSGI_APPLICATION = 'beerftw.wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    '/app/templates',
 )
 
 INSTALLED_APPS = (
@@ -127,9 +131,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'beerswap',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -160,7 +165,6 @@ LOGGING = {
         },
     }
 }
-"""
 
 try:
     from localsettings import *
